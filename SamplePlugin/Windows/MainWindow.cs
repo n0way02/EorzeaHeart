@@ -155,7 +155,7 @@ namespace EorzeaHeart.Windows
             if (profile != null)
             {
                 ImGui.BeginChild("##ProfileCard", new Vector2(0, 320), true, ImGuiWindowFlags.NoScrollbar);
-                DrawProfileImage(profile.ProfileImage, 96);
+                DrawProfileImage(profile.ProfileImage, 200);
                 ImGui.SetCursorPosX((ImGui.GetWindowWidth() - ImGui.CalcTextSize(profile.Name).X) * 0.5f);
                 ImGui.TextColored(new Vector4(1f, 0.7f, 0.7f, 1f), profile.Name);
                 ImGui.TextWrapped($"Bio: {profile.Bio}");
@@ -199,7 +199,7 @@ namespace EorzeaHeart.Windows
             ImGui.TextColored(new Vector4(1f, 0.2f, 0.5f, 1f), "Your Profile");
             ImGui.Spacing();
             ImGui.BeginChild("##MyProfileCard", new Vector2(0, 320), true, ImGuiWindowFlags.NoScrollbar);
-            DrawProfileImage(currentProfile.ProfileImage, 96);
+            DrawProfileImage(currentProfile.ProfileImage, 200);
             ImGui.SetCursorPosX((ImGui.GetWindowWidth() - ImGui.CalcTextSize(currentProfile.Name).X) * 0.5f);
             ImGui.TextColored(new Vector4(1f, 0.7f, 0.7f, 1f), currentProfile.Name);
             ImGui.TextWrapped($"Bio: {currentProfile.Bio}");
@@ -237,7 +237,7 @@ namespace EorzeaHeart.Windows
             foreach (var match in matches)
             {
                 ImGui.BeginChild($"##MatchCard_{match.Name}", new Vector2(0, 180), true, ImGuiWindowFlags.NoScrollbar);
-                DrawProfileImage(match.ProfileImage, 64);
+                DrawProfileImage(match.ProfileImage, 200);
                 ImGui.SetCursorPosX((ImGui.GetWindowWidth() - ImGui.CalcTextSize(match.Name).X) * 0.5f);
                 ImGui.TextColored(new Vector4(0.7f, 1f, 0.7f, 1f), match.Name);
                 ImGui.TextWrapped($"Bio: {match.Bio}");
